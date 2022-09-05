@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.1</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<groupId>com.example</groupId>
+	<artifactId>demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>demo</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>15</java.version>
+		<jdbi.version>3.32.0</jdbi.version>
+		<lombok.version>1.18.24</lombok.version>
+		<junit.version>5.9.0</junit.version>
+		<embedded-postgres.version>2.0.1</embedded-postgres.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.zonky.test</groupId>
+			<artifactId>embedded-postgres</artifactId>
+			<version>${embedded-postgres.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- JDBI -->
+		<dependency>
+			<groupId>org.jdbi</groupId>
+			<artifactId>jdbi3-sqlobject</artifactId>
+			<version>${jdbi.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jdbi</groupId>
+			<artifactId>jdbi3-postgres</artifactId>
+			<version>${jdbi.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jdbi</groupId>
+			<artifactId>jdbi3-jackson2</artifactId>
+			<version>${jdbi.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jdbi</groupId>
+			<artifactId>jdbi3-testing</artifactId>
+			<version>${jdbi.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- JUnit -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
